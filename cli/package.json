@@ -1,0 +1,35 @@
+{
+  "name": "getgumball",
+  "version": "1.0.0",
+  "description": "Ring your Gumball from the terminal: gumball ring, volume, mute. Talks to the Gumball server's MCP endpoint.",
+  "type": "module",
+  "bin": {
+    "gumball": "bin/gumball.js",
+    "getgumball": "bin/gumball.js"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "gumball",
+    "notifications",
+    "siren",
+    "webhook",
+    "mcp",
+    "cli"
+  ],
+  "homepage": "https://getgumball.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkmojo/gumball-mcp.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/thinkmojo/gumball-mcp/issues"
+  }
+}
