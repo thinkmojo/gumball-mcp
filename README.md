@@ -4,8 +4,8 @@ Ring a real siren light from your AI agent.
 
 [Gumball](https://getgumball.com) is a WiFi revolving light with a speaker that
 celebrates when something happens: a sale, a new user, a deploy. This is its
-**MCP server** (Model Context Protocol), so Claude, ChatGPT, Cursor, Claude Code
-and any other MCP client can make it spin, play a sound, change its volume or
+**MCP server** (Model Context Protocol), so Claude, Claude Code, Cursor
+and other MCP clients can make it spin, play a sound, change its volume or
 mute it, just by asking:
 
 > "Ring the Gumball when the deploy is done."
@@ -47,11 +47,17 @@ action shows in your Gumball's activity list with the token's name.
 
 **Claude** (claude.ai and the desktop app): Settings → Connectors → *Add custom
 connector*. Name it Gumball, address `https://app.getgumball.com/mcp`, and add
-a request header `Authorization` with the value `Bearer gb_your_token`. (Or
-paste `https://app.getgumball.com/mcp/gb_your_token` as the address.)
+a request header `Authorization` with the value `Bearer gb_your_token`.
 
-**ChatGPT**: Settings → Apps & Connectors → turn on developer mode, then
-*Create* a connector with the address `https://app.getgumball.com/mcp/gb_your_token`.
+Use the header whenever the app allows it. For apps that only take an address,
+put the token in it: `https://app.getgumball.com/mcp/gb_your_token`. That
+address **is** your token: keep it out of screenshots, listings, issues and
+shared configs. If it leaks, delete the token and make a new one.
+
+**ChatGPT** (not fully tested yet): Settings → Apps & Connectors → turn on
+developer mode (beta, web only), then *Create* a connector with the address
+form above. Ringing is a write action, which OpenAI doesn't allow on every
+plan yet: if ChatGPT can list your Gumballs but not ring them, that's the plan.
 
 **Claude Code**:
 
